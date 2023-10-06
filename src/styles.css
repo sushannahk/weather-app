@@ -58,3 +58,8 @@ a {
 	text-decoration: none;
 	color: #000142;
 }
+
+#weather-icon {
+	max-width: 80px;
+	max-height: 80px;
+}

@@ -41,13 +41,25 @@
             </form>
 
             <h1 id="city-name"></h1>
-            <h2> <span id="temperature-value">
+            <div class="row">
 
-                </span>
-                <span id="units">
-                    <a href="#" id="celsius-link">°C</a>|<a href="#" id="fahrenheit-link">°F</a>
-            </h2>
-            </span>
+                <div class="col-2">
+                    <img src="https://cdn3.iconfinder.com/data/icons/weather-ios-11-1/50/Sunny_Clear_Sun_Sunlight_Apple_Weather-512.png"
+                        alt="" id="weather-icon">
+                </div>
+                <div class="col-10">
+                    <h2> <span id="temperature-value">
+
+                        </span>
+                        <span id="units">
+                            <a href="#" id="celsius-link">°C</a>|<a href="#" id="fahrenheit-link">°F</a>
+
+                        </span>
+                    </h2>
+                </div>
+
+            </div>
+
             <div class="row">
                 <div class="col-4" id="current-date">
 
@@ -102,7 +114,8 @@
     </div>
     </div>
 
-    <footer>Developed by Zuzanna Kuczyńska-Cisowska <a href="https://github.com/sushannahk/weather-app">Git Hub</a>
+    <footer>Developed by Zuzanna Kuczyńska-Cisowska
+        <a href="https://github.com/sushannahk/weather-app">Git Hub</a>
     </footer>
     <script src="src/app.js"></script>
 </body>
