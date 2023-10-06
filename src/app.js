@@ -26,16 +26,26 @@ function showWeather(response) {
 	let cityElement = document.querySelector("#city-name");
 	let windElement = document.querySelector("#wind");
 	let humidityElement = document.querySelector("#humidity");
+	let descriptionElement = document.querySelector("#weather-description");
+	let iconElement = document.querySelector("#weather-icon");
 
 	let currentTemperature = Math.round(response.data.main.temp);
 	let currentCity = response.data.name;
 	let currentWind = response.data.wind.speed;
 	let currentHumidity = response.data.main.humidity;
+	let currentDescription = response.data.weather[0].description;
+	let currentIcon = response.data.weather[0].icon;
 
 	temperatureElement.innerHTML = currentTemperature;
-	windElement.innerHTML = `Wind ${currentWind}km/h`;
-	humidityElement.innerHTML = `Humidity ${currentHumidity}%`;
+	windElement.innerHTML = `wind ${currentWind}km/h`;
+	humidityElement.innerHTML = `humidity ${currentHumidity}%`;
 	cityElement.innerHTML = currentCity;
+	descriptionElement.innerHTML = currentDescription;
+	iconElement.setAttribute(
+		"src",
+		`https://openweathermap.org/img/wn/${currentIcon}.png`
+	);
+	iconElement.setAttribute("alt", "currentDescription");
 }
 
 function searchCity(city) {

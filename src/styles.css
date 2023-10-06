@@ -1,12 +1,9 @@
 body {
 	font-family: Poppins;
 	color: #000142;
-	background-color: rgb(248, 238, 238);
+	background-color: #e5d7dc;
 }
 
-h2 {
-	font-size: 60px;
-}
 br {
 	color: #00014254;
 }
@@ -16,6 +13,9 @@ footer {
 	text-align: center;
 }
 
+.temperature-details {
+	font-size: 60px;
+}
 .weather-app {
 	border: 1px solid rgba(0, 0, 0, 0.356);
 	border-radius: 15px;
@@ -48,6 +48,11 @@ footer {
 	margin-bottom: 30px;
 }
 
+#current-date {
+	font-size: 20px;
+	font-weight: 500;
+}
+
 #units {
 	font-size: 20px;
 	position: relative;
@@ -59,7 +64,7 @@ a {
 	color: #000142;
 }
 
-#weather-icon {
-	max-width: 80px;
-	max-height: 80px;
+div.col-1.weather-icon-container {
+	max-width: 600px;
+	margin: 30px auto;
 }
