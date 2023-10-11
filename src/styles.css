@@ -24,12 +24,25 @@ footer {
 	box-shadow: 8px 19px 27px -12px rgb(255, 139, 43);
 }
 
-.row .col-2 {
+.convert {
+	color: #0407a2;
+}
+
+.weather-forecast {
+	margin: 20px;
 	text-align: center;
 }
 
-.convert {
-	color: #0407a2;
+.weather-forecast-date {
+	font-size: 16px;
+}
+
+.weather-forecast-temperatures {
+	font-size: 13px;
+}
+
+.weather-forecast-temperature-min {
+	opacity: 0.7;
 }
 
 #input-city {
