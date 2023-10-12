@@ -91,6 +91,35 @@ function showCelsius(event) {
 	celsiusElement.classList.remove("convert");
 }
 
+function showForecast() {
+	let forecastElement = document.querySelector("#forecast");
+	let forecastHTML = `<div class="row">`;
+	let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+
+	days.forEach(function (day) {
+		forecastHTML =
+			forecastHTML +
+			`
+                    <div class="col-2">
+                        <div class="weather-forecast-date">
+                            ${day}
+                        </div>
+                        <img src="https://openweathermap.org/img/wn/10d.png" alt="">
+                        <div class="weather-forecast-temperatures">
+                            <span class="weather-forecast-temperature-max">
+                                18°
+                            </span>
+                            <span class="weather-forecast-temperature-min">
+                                12°
+                            </span>
+                        </div>
+                    </div>
+		`;
+	});
+	forecastHTML = forecastHTML + `</div>`;
+	forecastElement.innerHTML = forecastHTML;
+}
+
 let celsiusTemperature = null;
 let dateElement = document.querySelector("#current-date");
 let currentTime = new Date();
@@ -102,10 +131,11 @@ form.addEventListener("submit", handleSubmit);
 let currentPositionButton = document.querySelector("#current-btn");
 currentPositionButton.addEventListener("click", currentPosition);
 
-searchCity("Warszawa");
-
 let fahrenheitElement = document.querySelector("#fahrenheit-link");
 fahrenheitElement.addEventListener("click", showFahrenheit);
 
 let celsiusElement = document.querySelector("#celsius-link");
 celsiusElement.addEventListener("click", showCelsius);
+
+searchCity("Warszawa");
+showForecast();
