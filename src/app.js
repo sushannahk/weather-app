@@ -84,7 +84,7 @@ function showWeather(response) {
 
 	celsiusTemperature = currentTemperature;
 	temperatureElement.innerHTML = currentTemperature;
-	windElement.innerHTML = `wind ${currentWind}km/h`;
+	windElement.innerHTML = `wind ${Math.round(currentWind)} km/h`;
 	humidityElement.innerHTML = `humidity ${currentHumidity}%`;
 	cityElement.innerHTML = currentCity;
 	descriptionElement.innerHTML = currentDescription;
@@ -122,24 +122,6 @@ function currentPosition() {
 	navigator.geolocation.getCurrentPosition(getPosition);
 }
 
-function showFahrenheit(event) {
-	event.preventDefault();
-	let temperatureElement = document.querySelector("#temperature-value");
-	let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-	temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-	fahrenheitElement.classList.remove("convert");
-	celsiusElement.classList.add("convert");
-}
-
-function showCelsius(event) {
-	event.preventDefault();
-	let temperatureElement = document.querySelector("#temperature-value");
-	temperatureElement.innerHTML = Math.round(celsiusTemperature);
-	fahrenheitElement.classList.add("convert");
-	celsiusElement.classList.remove("convert");
-}
-
-let celsiusTemperature = null;
 let dateElement = document.querySelector("#current-date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
@@ -149,11 +131,5 @@ form.addEventListener("submit", handleSubmit);
 
 let currentPositionButton = document.querySelector("#current-btn");
 currentPositionButton.addEventListener("click", currentPosition);
-
-let fahrenheitElement = document.querySelector("#fahrenheit-link");
-fahrenheitElement.addEventListener("click", showFahrenheit);
-
-let celsiusElement = document.querySelector("#celsius-link");
-celsiusElement.addEventListener("click", showCelsius);
 
 searchCity("Warszawa");

@@ -24,10 +24,6 @@ footer {
 	box-shadow: 8px 19px 27px -12px rgb(255, 139, 43);
 }
 
-.convert {
-	color: #0407a2;
-}
-
 .weather-forecast {
 	margin: 20px;
 	text-align: center;
@@ -80,6 +76,10 @@ footer {
 	cursor: default;
 }
 
+#city-form {
+	margin-bottom: 10px;
+}
+
 a {
 	text-decoration: none;
 	color: #000142;
@@ -88,4 +88,12 @@ a {
 div.col-1.weather-icon-container {
 	max-width: 600px;
 	margin: 30px auto;
+}
+
+#weather-details {
+	text-align: center;
+}
+
+.main-info {
+	margin-bottom: 5px;
 }
